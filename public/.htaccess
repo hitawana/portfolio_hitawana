@@ -1,0 +1,4 @@
+# Força HTTPS (regra da documentação da Hostinger)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
