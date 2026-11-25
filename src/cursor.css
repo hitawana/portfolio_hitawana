@@ -1,0 +1,60 @@
+/* Cursor de lápis — só vale com html.pencil-on (adicionada pelo JS). */
+html.pencil-on,
+html.pencil-on a,
+html.pencil-on button,
+html.pencil-on summary,
+html.pencil-on label { cursor: none; }
+html.pencil-on input,
+html.pencil-on textarea { cursor: text; }
+
+#pencil-trail,
+#pencil-dot,
+#pencil-cursor { position: fixed; top: 0; left: 0; pointer-events: none; will-change: transform; }
+#pencil-trail { z-index: 9997; width: 100vw; height: 100vh; }
+#pencil-dot, #pencil-cursor { z-index: 9999; }
+#pencil-cursor { transition: opacity var(--cursor-t1) var(--cursor-ease); }
+#pencil-dot { transition: opacity var(--cursor-t1); }
+
+/* Ponto */
+#pencil-dot .pt {
+  position: absolute; top: -3px; left: -3px; width: 6px; height: 6px; border-radius: var(--radius-pill);
+  background: var(--ink); box-shadow: 0 0 0 1.5px var(--paper);
+  transition: transform var(--cursor-t1) var(--cursor-ease), opacity var(--cursor-t1);
+}
+/* Anel que "pousa" sobre links e botões (curva que passa do ponto) */
+#pencil-dot .ring {
+  position: absolute; top: -20px; left: -20px; width: 40px; height: 40px; border-radius: var(--radius-pill);
+  border: 1.5px solid var(--ink); background: transparent; opacity: 0;
+  transform: scale(.35);
+  transition: transform .42s var(--cursor-land), opacity var(--cursor-t1), background-color var(--cursor-t1);
+}
+#pencil-dot .lbl {
+  position: absolute; transform: translate(-50%, -50%) scale(.6); opacity: 0; white-space: nowrap;
+  font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink);
+  transition: all var(--cursor-t1) var(--cursor-ease);
+}
+#pencil-dot.hover .pt { transform: scale(.6); }
+#pencil-dot.hover .ring { opacity: 1; transform: none; }
+#pencil-dot.label .ring { transform: scale(1.8); background: color-mix(in srgb, var(--paper) 88%, transparent); }
+#pencil-dot.label .lbl { opacity: 1; transform: translate(-50%, -50%); }
+#pencil-dot.label .pt { opacity: 0; }
+#pencil-dot.press .ring { transform: scale(.82); }
+#pencil-dot.text .pt { opacity: 0; }
+#pencil-dot.on-dark .pt { background: var(--on-inverse); box-shadow: 0 0 0 1.5px var(--inverse); }
+#pencil-dot.on-dark .ring { border-color: var(--on-inverse); }
+
+/* Lápis: traço 1,75px, cantos arredondados, como os ícones do sistema */
+#pencil-cursor svg { display: block; width: 30px; height: 30px; overflow: visible; color: var(--ink); transition: color var(--cursor-t1); }
+#pencil-cursor .body { fill: var(--surface); stroke: currentColor; stroke-width: 1.75; stroke-linejoin: round; }
+#pencil-cursor .lead { fill: currentColor; }
+#pencil-cursor .detail { fill: none; stroke: currentColor; stroke-width: 1.25; stroke-linecap: round; }
+/* Sobre algo clicável o lápis sai de cena: fica só o anel */
+#pencil-cursor.perched { opacity: 0; }
+#pencil-cursor.on-dark svg { color: var(--on-inverse); }
+#pencil-cursor.on-dark .body { fill: var(--inverse); }
+
+/* Reduzir movimento: o JS não liga o lápis; isto garante o cursor nativo mesmo assim */
+@media (prefers-reduced-motion: reduce) {
+  html.pencil-on, html.pencil-on a, html.pencil-on button, html.pencil-on summary, html.pencil-on label { cursor: revert; }
+  #pencil-trail, #pencil-dot, #pencil-cursor { display: none; }
+}

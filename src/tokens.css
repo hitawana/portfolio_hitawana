@@ -1,0 +1,53 @@
+/* Cor: Hitawana — Edição P&B (editorial frio).
+   Tipografia, espaço, forma e movimento: Hitawana — Híbrida.
+   Cursor: tempos e curvas portados da análise do Nettie's Bees. */
+:root {
+  /* Cor: Hitawana — Edição P&B (tema Jornal), usada como "editorial frio" */
+  --paper: #f5f5f2;
+  --surface: #ffffff;
+  --surface-sunken: #eaeae6;
+  --ink: #0e0e0e;
+  --ink-soft: #4a4a48;
+  --line: #cfcfcb;
+  --line-strong: #7a7a76;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-tint: #e5edff;
+  --on-accent: #ffffff;
+  --keyword: #4c1d95;
+  --keyword-tint: #efe9fc;
+  --sand: #c9c9c4;
+  --inverse: #0e0e0e;
+  --on-inverse: #f5f5f2;
+  --focus: #1d4ed8;
+
+  --font-display: Gloock, "Times New Roman", Georgia, serif;
+  --font-emphasis: "IBM Plex Serif", Georgia, serif;
+  --font-sans: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-6: 24px;
+  --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-24: 96px; --space-40: 160px;
+
+  --radius-none: 0px; --radius-sm: 4px; --radius-md: 12px; --radius-pill: 999px;
+  --border-hairline: 1px; --border-focus: 2px; --focus-offset: 2px;
+
+  --content-max: 1408px; --measure: 64ch; --touch-min: 44px; --header-height: 64px;
+
+  /* Movimento — Híbrida */
+  --dur-fast: 200ms; --dur-base: 400ms; --dur-slow: 600ms; --dur-reveal: 800ms; --stagger: 90ms;
+  --ease-out: cubic-bezier(.19, 1, .22, 1);
+  --ease-wipe: cubic-bezier(.2, .7, .1, 1);
+  --ease-standard: cubic-bezier(.4, 0, .2, 1);
+  --press-scale: .98;
+
+  /* Movimento — cursor (valores da referência) */
+  --cursor-t1: .22s;
+  --cursor-ease: cubic-bezier(.2, .7, .1, 1);
+  --cursor-land: cubic-bezier(.34, 1.4, .64, 1);
+}
+
+/* Textura de papel (grão muito leve), aplicada como camada de fundo */
+:root {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .05 0 0 0 0 .05 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
