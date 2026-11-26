@@ -17,7 +17,7 @@ export const hero = {
   lead: 'Comecei no atendimento, ouvindo demandas e registrando chamados. Nas escolas, descobri como automatizar as tarefas que se repetiam toda semana. Hoje, uno tecnologia e sala de aula: dou aula de TI e desenvolvo ferramentas pensadas para facilitar o dia a dia de quem ensina e de quem aprende.',
   // os três números da abertura são contados do conteúdo: veja `heroFacts`, no fim do arquivo
   annotation: 'eu, dando aula',
-  now: 'Hoje dou aula no ensino técnico, no interior do Maranhão, para turmas de Informática para Internet e de Programação de Jogos Digitais. Quando falta equipamento no laboratório, a aula precisa continuar. É daí que vem o app que estou começando: módulos com simulações para estudar mesmo sem internet.',
+  now: 'Hoje dou aula no ensino técnico, no interior do Maranhão, para turmas de Informática para Internet e de Programação de Jogos Digitais. Quando falta equipamento no laboratório, a aula precisa continuar. É daí que vem o app que estou começando a desenvolver: offline-first, em TypeScript, com módulos de ilustração, simulação e questionário que rodam no celular sem internet e guardam as respostas no aparelho até a conexão voltar.',
   // Opcional: uma situação real de sala de aula, em uma frase. Vazio = não aparece.
   classroomLine: '',
 }
@@ -75,7 +75,7 @@ export const tcc = {
   id: 'rpa',
   name: 'RPA',
   subtitle: 'como estratégia de interoperabilidade entre sistemas de gestão escolar e plataformas educacionais digitais', // continua o título "RPA"
-  desc: 'Um robô que mantém os cadastros de estudantes alinhados entre os sistemas da escola. Ele compara os registros, corrige sozinho o que é seguro e deixa para revisão humana o que é ambíguo. Construí acompanhando o processo de perto, como observadora participante.',
+  desc: 'Robô em UiPath que mantém os cadastros de estudantes alinhados entre o sistema de gestão escolar e a plataforma educacional, compara os registros, corrige sozinho o que é seguro e envia os casos ambíguos para revisão humana. Desenvolvido como observadora participante do processo.',
   role: '', // sem papel no bloco do RPA
   facts: ['Nota 10 no TCC', 'Artigo aceito no CONCISTEC 2026'],
   article: {
@@ -91,7 +91,7 @@ export const tcc = {
 
 // Meus projetos: uma lista só, sem imagem. Coluna da direita: só o papel (as ferramentas ficam no calendário do stack).
 export const compact: Project[] = [
-  { id: 'google-admin', name: 'Usuários no Google Admin', desc: 'Criar contas no Google Admin é uma tarefa repetida, e um clique errado pode custar caro. Automatizei a tarefa e coloquei travas antes de qualquer ação destrutiva.', role: 'Autoria' },
+  { id: 'google-admin', name: 'Usuários no Google Admin', desc: 'Criação de contas no Google Admin automatizada com Python e Playwright. O robô executa o cadastro no console e passa por travas antes de qualquer ação destrutiva, trocando um trabalho manual repetitivo por um fluxo previsível.', role: 'Autoria' },
   { id: 'chromebooks', name: 'Reserva de Chromebooks', desc: 'Construí um sistema de reserva em cinco módulos.', role: 'Autoria' },
   {
     id: 'divjus', name: 'Portal DivJus',
@@ -101,9 +101,9 @@ export const compact: Project[] = [
     link: { href: 'https://divjus-advocacia-not-cias-jur-dicas.ai.studio', on: false },
   },
   { id: 'tiraco', name: 'Tiracó', desc: 'RPG educativo sobre a cultura das quebradeiras de coco do Maranhão. Premiado no XVII Encontro Científico da UNDB, em 2024.', role: 'Autoria' },
-  { id: 'profile-health', name: 'Profile Analyts Health', desc: 'Projeta o tempo da próxima prova de um corredor amador a partir da planilha dele, sem servidor.', role: 'Autoria' },
-  { id: 'canhoto', name: 'Sistema Canhoto', desc: 'Gestão de notas para uma escola.', role: 'Orientação técnica' },
-  { id: 'jogos', name: 'Jogos educativos de quiz', desc: 'Jogo da Comunicação, Human or AI? e Show de Tradições, feitos para uma escola.', role: 'Orientação técnica' },
+  { id: 'profile-health', name: 'Profile Analyts Health', desc: 'SPA sem servidor que lê a planilha .xlsx do corredor e projeta o tempo da próxima prova: média móvel ponderada quando a distância é parecida com o histórico, equação de Riegel quando há salto de distância.', role: 'Autoria' },
+  { id: 'canhoto', name: 'Sistema Canhoto', desc: 'Protótipo idealizado como solução para a gestão de notas de uma escola', role: 'Orientação técnica' },
+  { id: 'jogos', name: 'Jogos educativos de quiz', desc: 'Jogo da Comunicação, Human or AI? e Show de Tradições: quizzes educativos personalizados para o tema de cada evento da escola. Construídos com o público idealizador, funcionam como ponte entre o conteúdo e a ferramenta técnica, aumentando a imersão dos participantes.', role: 'Orientação técnica' },
 ]
 
 /* ---------- Agora ----------
@@ -129,7 +129,7 @@ export const agora = {
 export const app = {
   href: '',
   titulo: 'Em construção',
-  aviso: 'Estou construindo o app de simulações para estudar sem internet. Quando a primeira versão estiver pronta, o link aparece aqui.',
+  aviso: 'O app está em desenvolvimento. O link aparece aqui quando a primeira versão for publicada.',
 }
 
 /* Currículo em PDF (publicado junto com o artifact). Baixado pelo botão da abertura e pelo item "Currículo" do menu. */
@@ -300,7 +300,7 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/hitawana',
   github: 'https://github.com/hitawana',
   title: 'Entre em contato',
-  lead: 'Quer conversar sobre uma vaga ou um projeto? É só me mandar um e-mail ou uma mensagem no LinkedIn.',
+  lead: 'Para conversar sobre uma vaga ou um projeto, envie um e-mail ou uma mensagem no LinkedIn.',
   disponibilidade: 'Disponível para vagas e projetos', // linha abaixo do texto, com o quadradinho azul
 }
 
