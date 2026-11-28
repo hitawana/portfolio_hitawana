@@ -297,6 +297,9 @@ img { display: block; max-width: 100%; }
   padding-block: var(--space-3); border-bottom: var(--border-hairline) dashed var(--line-strong);
 }
 .compact__name { font-family: var(--font-display); font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: -.01em; }
+/* título com link: como os links do menu (tinta; fio fino no hover), sem mudar a tipografia do título */
+.compact__link { font: inherit; letter-spacing: inherit; color: var(--ink); text-decoration: none; text-underline-offset: 4px; }
+.compact__link:hover { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; }
 .compact__desc { font-size: 17px; line-height: 28px; }
 .compact .role { text-align: right; }
 /* 640–1299: o papel vai para baixo do nome, para a descrição (16 px) ter largura e caber em duas linhas */

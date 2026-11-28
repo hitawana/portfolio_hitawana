@@ -376,11 +376,12 @@ function SecaoProjetos() {
       <ul className="compact">
         {compact.map((p) => (
           <li className="compact__row" key={p.id}>
-            <h3 className="compact__name">{p.name}</h3>
-            <p className="compact__desc">
-              {p.desc}
-              {p.link?.on && <> <a className="link" href={p.link.href} target="_blank" rel="noopener noreferrer">Ver site →</a></>}
-            </p>
+            <h3 className="compact__name">
+              {p.link?.on
+                ? <a className="compact__link" href={p.link.href} target="_blank" rel="noopener noreferrer">{p.name}</a>
+                : p.name}
+            </h3>
+            <p className="compact__desc">{p.desc}</p>
             {p.role && <p className="role">{p.role}</p>}
           </li>
         ))}

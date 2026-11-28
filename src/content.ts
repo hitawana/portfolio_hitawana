@@ -60,7 +60,7 @@ export interface Project {
   role: string // papel real (Autoria, Consultoria, Orientação técnica); vazio = não aparece
   stack?: string
   media?: Media
-  link?: { href: string; on: boolean } // on: false = link preparado, ainda não aparece
+  link?: { href: string; on: boolean } // on: true = o título do projeto vira link; false = link preparado, ainda não aparece
 }
 
 export const gallery = {
@@ -97,8 +97,8 @@ export const compact: Project[] = [
     id: 'divjus', name: 'Portal DivJus',
     desc: 'Site institucional e portal de artigos jurídicos para um escritório de advocacia: áreas de atuação, equipe e artigos filtrados por área.',
     role: 'Consultoria',
-    // Link "Ver site →": troque `on` para true quando puder publicar
-    link: { href: 'https://divjus-advocacia-not-cias-jur-dicas.ai.studio', on: false },
+    // Com `on: true`, o título do projeto vira link (abre em nova aba)
+    link: { href: 'https://github.com/hitawana/jusinforma-portal', on: true },
   },
   { id: 'tiraco', name: 'Tiracó', desc: 'RPG educativo sobre a cultura das quebradeiras de coco do Maranhão. Premiado no XVII Encontro Científico da UNDB, em 2024.', role: 'Autoria' },
   { id: 'profile-health', name: 'Profile Analyts Health', desc: 'SPA sem servidor que lê a planilha .xlsx do corredor e projeta o tempo da próxima prova: média móvel ponderada quando a distância é parecida com o histórico, equação de Riegel quando há salto de distância.', role: 'Autoria' },
